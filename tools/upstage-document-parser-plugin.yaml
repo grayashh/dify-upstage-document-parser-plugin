@@ -1,0 +1,30 @@
+identity:
+  name: "upstage-document-parser-plugin"
+  author: "ted"
+  label:
+    en_US: "upstage-document-parser-plugin"
+    zh_Hans: "upstage-document-parser-plugin"
+    pt_BR: "upstage-document-parser-plugin"
+description:
+  human:
+    en_US: "paser document with upstage document parser"
+    zh_Hans: "paser document with upstage document parser"
+    pt_BR: "paser document with upstage document parser"
+  llm: "paser document with upstage document parser"
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: Query string
+    human_description:
+      en_US: "paser document with upstage document parser"
+      zh_Hans: "paser document with upstage document parser"
+      pt_BR: "paser document with upstage document parser"
+    llm_description: "paser document with upstage document parser"
+    form: llm
+extra:
+  python:
+    source: tools/upstage-document-parser-plugin.py

@@ -1,0 +1,17 @@
+identity:
+  author: "ted"
+  name: "upstage-document-parser-plugin"
+  label:
+    en_US: "upstage-document-parser-plugin"
+    zh_Hans: "upstage-document-parser-plugin"
+    pt_BR: "upstage-document-parser-plugin"
+  description:
+    en_US: "paser document with upstage document parser"
+    zh_Hans: "paser document with upstage document parser"
+    pt_BR: "paser document with upstage document parser"
+  icon: "icon.svg"
+tools:
+  - tools/upstage-document-parser-plugin.yaml
+extra:
+  python:
+    source: provider/upstage-document-parser-plugin.py
