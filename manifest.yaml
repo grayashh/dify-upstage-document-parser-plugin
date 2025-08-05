@@ -1,6 +1,6 @@
 version: 0.0.1
 type: plugin
-author: ted
+author: grayashh
 name: upstage-document-parser-plugin
 label:
   en_US: upstage-document-parser-plugin
