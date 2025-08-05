@@ -1,1 +1,16 @@
+# Core dependencies
+requests==2.32.4
+python-dotenv==1.1.1
+pydantic==2.11.7
+pydantic-core==2.33.2
+typing-extensions==4.14.1
+
+
 dify_plugin>=0.2.0,<0.3.0
+
+# Logging and formatting
+pyyaml==6.0.2
+
+# Optional utilities
+httpx==0.28.1  # For async HTTP requests
+anyio==4.10.0  # For async support

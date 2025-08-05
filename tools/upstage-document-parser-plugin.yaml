@@ -1,30 +1,76 @@
 identity:
-  name: "upstage-document-parser-plugin"
-  author: "ted"
+  name: 'upstage-document-parser-plugin'
+  author: 'ted'
   label:
-    en_US: "upstage-document-parser-plugin"
-    zh_Hans: "upstage-document-parser-plugin"
-    pt_BR: "upstage-document-parser-plugin"
+    en_US: Upstage Document Parser
+    zh_Hans: Upstage Document Parser
+    pt_BR: Upstage Document Parser
+    ko_KR: Upstage Document Parser
 description:
   human:
-    en_US: "paser document with upstage document parser"
-    zh_Hans: "paser document with upstage document parser"
-    pt_BR: "paser document with upstage document parser"
-  llm: "paser document with upstage document parser"
+    en_US: Advanced Document Parsing API Tool. Use this tool to parse JPEG, PNG, BMP, PDF, TIFF, HEIC, DOCX, XLSX, PPTX, etc
+    zh_Hans: Advanced Document Parsing API Tool. Use this tool to parse JPEG, PNG, BMP, PDF, TIFF, HEIC, DOCX, XLSX, PPTX, etc
+    pt_BR: Advanced Document Parsing API Tool. Use this tool to parse JPEG, PNG, BMP, PDF, TIFF, HEIC, DOCX, XLSX, PPTX, etc
+    ko_KR: 고급 문서 파싱 API 도구. JPEG, PNG, BMP, PDF, TIFF, HEIC, DOCX, XLSX, PPTX, etc 파일을 파싱하는 데 사용
+  llm: Advanced Document Parsing API Tool. Use this tool to parse JPEG, PNG, BMP, PDF, TIFF, HEIC, DOCX, XLSX, PPTX, etc
 parameters:
-  - name: query
-    type: string
+  - name: files
+    type: files
     required: true
     label:
-      en_US: Query string
-      zh_Hans: 查询语句
-      pt_BR: Query string
+      en_US: upload file
+      ko_KR: 파일 업로드
     human_description:
-      en_US: "paser document with upstage document parser"
-      zh_Hans: "paser document with upstage document parser"
-      pt_BR: "paser document with upstage document parser"
-    llm_description: "paser document with upstage document parser"
+      en_US: upload the file to be parsed
+      ko_KR: 파싱할 파일 업로드
+    llm_description: upload the file to be parsed
     form: llm
+  - name: result_type
+    type: select
+    required: false
+    default: md
+    label:
+      en_US: result form type
+      ko_KR: 결과 형식 유형
+    human_description:
+      en_US: the type of the result
+      ko_KR: 결과의 형식 유형
+    options:
+      - label:
+          en_US: md
+          ko_KR: md
+        value: md
+      - label:
+          en_US: html
+          ko_KR: html
+        value: html
+      - label:
+          en_US: text
+          ko_KR: 텍스트
+        value: text
+    llm_description: the type of the result. Either `md`, `html`, or `text`.
+    form: form
+  - name: as_file
+    type: select
+    required: false
+    default: text
+    label:
+      en_US: output as file
+      ko_KR: 파일로 반환
+    human_description:
+      en_US: the type of the output
+      ko_KR: 출력의 형식 유형
+    options:
+      - label:
+          en_US: text
+          ko_KR: 텍스트로 반환
+        value: text
+      - label:
+          en_US: file
+          ko_KR: 파일로 반환
+        value: file
+    llm_description: the type of the output. Either `text`, or `file`.
+    form: form
 extra:
   python:
     source: tools/upstage-document-parser-plugin.py

@@ -1,15 +1,43 @@
 identity:
-  author: "ted"
-  name: "upstage-document-parser-plugin"
+  author: 'ted'
+  name: 'upstage-document-parser-plugin'
   label:
-    en_US: "upstage-document-parser-plugin"
-    zh_Hans: "upstage-document-parser-plugin"
-    pt_BR: "upstage-document-parser-plugin"
+    en_US: Upstage Document Parser
+    zh_Hans: Upstage Document Parser
+    pt_BR: Upstage Document Parser
+    ko_KR: Upstage Document Parser
   description:
-    en_US: "paser document with upstage document parser"
-    zh_Hans: "paser document with upstage document parser"
-    pt_BR: "paser document with upstage document parser"
-  icon: "icon.svg"
+    en_US: Advanced Document Parsing API Tool. Use this tool to parse JPEG, PNG, BMP, PDF, TIFF, HEIC, DOCX, XLSX, PPTX, etc
+    zh_Hans: Advanced Document Parsing API Tool. Use this tool to parse JPEG, PNG, BMP, PDF, TIFF, HEIC, DOCX, XLSX, PPTX, etc
+    pt_BR: Advanced Document Parsing API Tool. Use this tool to parse JPEG, PNG, BMP, PDF, TIFF, HEIC, DOCX, XLSX, PPTX, etc
+    ko_KR: 고급 문서 파싱 API 도구. JPEG, PNG, BMP, PDF, TIFF, HEIC, DOCX, XLSX, PPTX, etc 파일을 파싱하는 데 사용
+  icon: 'icon.svg'
+credentials_for_provider:
+  upstage_api_key:
+    help:
+      en_US: Get your Upstage API key from Upstage(https://console.upstage.ai/api-keys)
+      ko_KR: Upstage API key 가져오기
+    label:
+      en_US: Upstage API key
+      ko_KR: Upstage API key
+    placeholder:
+      en_US: Please input your Upstage Document Parse API key
+      ko_KR: Upstage Document Parse API key 입력
+    required: true
+    type: secret-input
+    url: https://console.upstage.ai/api-keys
+  base_url:
+    help:
+      en_US: Please input your Base URL of dify service
+      ko_KR: dify 서비스의 Base URL 입력
+    label:
+      en_US: Base URL of dify service
+      ko_KR: dify 서비스의 Base URL
+    placeholder:
+      en_US: https://cloud.dify.ai
+      ko_KR: https://cloud.dify.ai
+    required: true
+    type: text-input
 tools:
   - tools/upstage-document-parser-plugin.yaml
 extra:
