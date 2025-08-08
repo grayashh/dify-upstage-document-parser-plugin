@@ -1,17 +1,17 @@
 version: 0.0.1
 type: plugin
 author: grayashh
-name: upstage-document-parser-plugin
+name: upstage-document-parser
 label:
-  en_US: upstage-document-parser-plugin
-  ja_JP: upstage-document-parser-plugin
-  zh_Hans: upstage-document-parser-plugin
-  pt_BR: upstage-document-parser-plugin
+  en_US: upstage-document-parser
+  ja_JP: upstage-document-parser
+  zh_Hans: upstage-document-parser
+  pt_BR: upstage-document-parser
 description:
-  en_US: paser document with upstage document parser
-  ja_JP: paser document with upstage document parser
-  zh_Hans: paser document with upstage document parser
-  pt_BR: paser document with upstage document parser
+  en_US: parse documents with Upstage Document Parser
+  ja_JP: parse documents with Upstage Document Parser
+  zh_Hans: parse documents with Upstage Document Parser
+  pt_BR: parse documents with Upstage Document Parser
 icon: icon.svg
 resource:
   memory: 268435456
@@ -24,7 +24,7 @@ resource:
       enabled: true
 plugins:
   tools:
-    - provider/upstage-document-parser-plugin.yaml
+    - provider/upstage-document-parser.yaml
 meta:
   version: 0.0.1
   arch:

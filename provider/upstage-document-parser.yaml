@@ -1,6 +1,6 @@
 identity:
   author: 'grayashh'
-  name: 'upstage-document-parser-plugin'
+  name: 'upstage-document-parser'
   label:
     en_US: Upstage Document Parser
     zh_Hans: Upstage Document Parser
@@ -39,7 +39,7 @@ credentials_for_provider:
     required: true
     type: text-input
 tools:
-  - tools/upstage-document-parser-plugin.yaml
+  - tools/upstage-document-parser.yaml
 extra:
   python:
-    source: provider/upstage-document-parser-plugin.py
+    source: provider/upstage-document-parser.py

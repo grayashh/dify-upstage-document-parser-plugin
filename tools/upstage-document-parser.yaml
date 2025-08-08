@@ -1,5 +1,5 @@
 identity:
-  name: 'upstage-document-parser-plugin'
+  name: 'upstage-document-parser'
   author: 'ted'
   label:
     en_US: Upstage Document Parser
@@ -73,4 +73,4 @@ parameters:
     form: form
 extra:
   python:
-    source: tools/upstage-document-parser-plugin.py
+    source: tools/upstage-document-parser.py
