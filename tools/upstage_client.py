@@ -44,7 +44,7 @@ class UpstageDocumentParseClient:
         output_formats: Optional[List[str]] = None,
         chart_recognition: str = "true",
         base64_encoding: Optional[List[str]] = None,
-        model: str = "document-parse",
+        model: str = "document-parse-250618",
         output_dir: str = "upstage_export",
         debug: bool = False,
     ):
@@ -60,7 +60,7 @@ class UpstageDocumentParseClient:
             output_formats (Optional[List[str]]): List of output formats to generate, such as ["html", "markdown", "text"]. Defaults to all formats.
             chart_recognition (str): Whether to use chart recognition. Defaults to "true".
             base64_encoding (Optional[List[str]]): List of layout categories to provide as base64 encoded strings (e.g., ["table"]). Defaults to ["table", "figure", "chart"].
-            model (str): Model to use for inference. Defaults to "document-parse".
+            model (str): Model to use for inference. Defaults to "document-parse-250618".
             output_dir (str): Directory to save output files. Defaults to "upstage_export".
             debug (bool): Whether to enable debug logging. Defaults to False.
 

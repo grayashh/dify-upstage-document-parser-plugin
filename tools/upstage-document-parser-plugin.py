@@ -39,7 +39,7 @@ class UpstageDocumentParserPluginTool(Tool):
         # Temporary output directory
         self.output_dir = "temp_output"
         # Upstage Document Parse Model
-        # https://console.upstage.ai/docs/capabilities/document-parse/asynchronous
+        # https://console.upstage.ai/api/document-digitization/document-parsing
         self.model = "document-parse-250618"
         # Debug mode
         self.debug = False
@@ -262,18 +262,18 @@ class UpstageDocumentParserPluginTool(Tool):
                 layout detection.
 
             - coordinates (boolean): Whether to return coordinates of bounding boxes for each
-              layout element. Default: true.
+              layout element. Default: false.
 
             - chart_recognition (boolean): Whether to use chart recognition. Default: true.
 
             - output_formats (string): Format for layout elements. Possible values are "text",
-              "html", and "markdown". Default: ["html"].
+              "html", and "markdown". Default: ["html", "markdown", "text"].
 
-            - model (string): Model used for inference. Default: "document-parse-250305".
+            - model (string): Model used for inference. Default: "document-parse-250618".
 
             - base64_encoding (string): Which layout categories should be provided as base64
               encoded strings. This is useful for extracting images of specific elements
-              (e.g., tables or figures) from the document. Default: [].
+              (e.g., tables or figures) from the document. Default: ["table", "figure", "chart"].
         """
         self.logger.info("Tool invocation started")
         self.logger.debug(f"Tool parameters: {tool_parameters}")
@@ -361,6 +361,12 @@ class UpstageDocumentParserPluginTool(Tool):
                 results = self.client.convert_to_text(original_cache_path)
             else:
                 error_msg = f"Unsupported result type: {result_type}"
+                self.logger.error(error_msg)
+                yield self.create_text_message(error_msg)
+                return
+
+            if results is None:
+                error_msg = "Conversion failed: received empty result from Upstage API."
                 self.logger.error(error_msg)
                 yield self.create_text_message(error_msg)
                 return

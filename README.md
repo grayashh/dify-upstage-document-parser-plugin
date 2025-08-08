@@ -81,7 +81,7 @@ The plugin uses the following parameters when calling the Upstage Document Parse
 | `coordinates`       | Boolean      | Whether to return bounding box coordinates                                                            | false                        |
 | `chart_recognition` | Boolean      | Whether to use chart recognition                                                                      | true                         |
 | `output_formats`    | List[String] | Formats for layout elements: "text", "html", "markdown"                                               | ["html", "markdown", "text"] |
-| `model`             | String       | Model used for inference                                                                              | "document-parse-250305"      |
+| `model`             | String       | Model used for inference                                                                              | "document-parse-250618"      |
 | `base64_encoding`   | List[String] | Layout categories to provide as base64-encoded strings                                                | ["table", "figure", "chart"] |
 
 ### Caching Mechanism
